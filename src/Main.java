@@ -21,5 +21,6 @@ public class Main {
         cachorro1.latir();
         cachorro1.comer();
         System.out.println(cachorro1.pegar());
+        System.out.println(cachorro1.interagir("carinho"));
         }
     }

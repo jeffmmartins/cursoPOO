@@ -6,6 +6,7 @@ public class Cachorro {
    public int altura;
    public double peso;
    public int tamanhoDoRabo;
+   public String estadoDeEspirito;
 
    public void comer(){}
 
@@ -15,5 +16,14 @@ public class Cachorro {
 
    public String pegar(){
       return "bolinha";
+   }
+
+   public String interagir(String acao){
+      if (acao.equals("carinho")){
+         this.estadoDeEspirito = "Feliz";
+      }else{
+         this.estadoDeEspirito = "neutro";
+      }
+      return estadoDeEspirito;
    }
 }
