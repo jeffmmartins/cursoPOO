@@ -3,6 +3,8 @@
 public class Main {
     public static void main(String[] args) {
             byte variavelByte = 120;
+            // short -32768 a 32767
+            // char 0 a 65535
         System.out.println(variavelByte);
         }
     }
