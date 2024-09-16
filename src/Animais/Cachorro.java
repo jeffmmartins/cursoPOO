@@ -6,4 +6,10 @@ public class Cachorro {
    public int altura;
    public double peso;
    public int tamanhoDoRabo;
+
+   public void comer(){}
+
+   public void latir(){
+      System.out.println("AUAUAUA");
+   }
 }
