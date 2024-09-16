@@ -12,4 +12,8 @@ public class Cachorro {
    public void latir(){
       System.out.println("AUAUAUA");
    }
+
+   public String pegar(){
+      return "bolinha";
+   }
 }
