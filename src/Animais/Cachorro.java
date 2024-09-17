@@ -8,6 +8,12 @@ public class Cachorro {
    private int tamanhoDoRabo;
    private String estadoDeEspirito;
 
+   // Construtores
+
+   Cachorro(String nome, String cor, int altura, double pedo, int tamanhoDoRabo, String estadoDeEspirito){
+
+   }
+
    public String getNome(){
       return this.nome;
    }
