@@ -10,6 +10,7 @@ public class Main {
         System.out.println(variavelByte);
 
         Cachorro cachorro1 = new Cachorro();
+        Cachorro cachorro2 = new Cachorro("Pupy", "marron" , 5, 5.5, 1, "nada");
         cachorro1.setAltura(2);
         cachorro1.setCor("Marrom");
         cachorro1.setNome("jack");

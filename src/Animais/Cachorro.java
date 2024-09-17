@@ -10,8 +10,14 @@ public class Cachorro {
 
    // Construtores
 
-   Cachorro(String nome, String cor, int altura, double pedo, int tamanhoDoRabo, String estadoDeEspirito){
-
+   public Cachorro(){}
+   public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
+      this.nome = nome;
+      this.cor = cor;
+      this.altura = altura;
+      this.peso = peso;
+      this.tamanhoDoRabo = tamanhoDoRabo;
+      this.estadoDeEspirito = estadoDeEspirito;
    }
 
    public String getNome(){
