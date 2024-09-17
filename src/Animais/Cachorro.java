@@ -1,12 +1,16 @@
 package Animais;
 
 public class Cachorro {
-   public String nome;
-   public String cor;
-   public int altura;
-   public double peso;
-   public int tamanhoDoRabo;
-   public String estadoDeEspirito;
+   private String nome;
+   private String cor;
+   private int altura;
+   private double peso;
+   private int tamanhoDoRabo;
+   private String estadoDeEspirito;
+
+   public String getNome(){
+      return this.nome;
+   }
 
    public void comer(){}
 
@@ -20,9 +24,9 @@ public class Cachorro {
 
    public String interagir(String acao){
       switch (acao){
-         case "carinho": this.estadoDeEspirito = "feliz";
-         case "vai dormir": this.estadoDeEspirito = "fica bravo";
-         case "pisar na batinha ": this.estadoDeEspirito = "triste";
+         case "carinho": this.estadoDeEspirito = "feliz"; break;
+         case "vai dormir": this.estadoDeEspirito = "fica bravo"; break;
+         case "pisar na batinha": this.estadoDeEspirito = "triste";break;
          default: this.estadoDeEspirito = "neutro";
       }
 
@@ -33,5 +37,6 @@ public class Cachorro {
 //         this.estadoDeEspirito = "neutro";
 //      }
 //      return estadoDeEspirito;
+      return estadoDeEspirito;
    }
 }
