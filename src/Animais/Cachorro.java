@@ -95,4 +95,11 @@ public class Cachorro {
 //      return estadoDeEspirito;
       return estadoDeEspirito;
    }
+
+   @Override
+   public String toString() {
+      return "Cachorro{" +
+              "nome='" + nome + '\'' +
+              '}';
+   }
 }
