@@ -23,5 +23,7 @@ public class Main {
         cachorro1.comer();
         System.out.println(cachorro1.pegar());
         System.out.println(cachorro1.interagir("pisar na batinha"));
+        System.out.println(cachorro1.toString());
+        System.out.println(cachorro2.toString());
         }
     }
