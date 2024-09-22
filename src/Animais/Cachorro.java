@@ -1,6 +1,7 @@
 package Animais;
 
 public class Cachorro {
+   static int numeroDeCachorros;
    private String nome;
    private String cor;
    private int altura;
@@ -18,6 +19,14 @@ public class Cachorro {
       this.peso = peso;
       this.tamanhoDoRabo = tamanhoDoRabo;
       this.estadoDeEspirito = estadoDeEspirito;
+
+      numeroDeCachorros ++;
+   }
+
+
+
+   public static int getNumeroDeCachorros() {
+      return numeroDeCachorros;
    }
 
    public String getNome(){
