@@ -10,9 +10,10 @@ public class Main {
         System.out.println(variavelByte);
 
         Cachorro cachorro1 = new Cachorro();
-        System.out.println(cachorro1.get);
+        System.out.println(cachorro1.getNumeroDeCachorros());
         Cachorro cachorro2 = new Cachorro("Pupy", "marron" , 5, 5.5, 1, "nada");
-
+        System.out.println(cachorro2.getNumeroDeCachorros());
+        System.out.println(cachorro1.getNumeroDeCachorros());
 
         cachorro1.setAltura(2);
         cachorro1.setCor("Marrom");

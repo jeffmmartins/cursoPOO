@@ -25,7 +25,7 @@ public class Cachorro {
 
 
 
-   public static int getNumeroDeCachorros() {
+   public int getNumeroDeCachorros() {
       return numeroDeCachorros;
    }
 
