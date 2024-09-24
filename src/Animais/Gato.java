@@ -7,4 +7,19 @@ public class Gato {
     private int altura;
     private double peso;
     private String estadoDeEspirito;
+
+    // Metodos
+
+    public void comer(){}
+    public void dormir(){}
+    public void soar(){
+        System.out.println("MIAU MIAU");
+    }
+
+    @Override
+    public String toString() {
+        return "Gato{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }
