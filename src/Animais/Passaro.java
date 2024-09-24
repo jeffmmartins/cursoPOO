@@ -17,4 +17,10 @@ public class Passaro {
 
         numeroDePassaros ++;
     }
+
+    public void dormir(){}
+    public void comer(){}
+    public void soar(){
+        System.out.println("Piu Piu");
+    }
 }
