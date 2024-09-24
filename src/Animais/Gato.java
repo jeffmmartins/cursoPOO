@@ -8,6 +8,19 @@ public class Gato {
     private double peso;
     private String estadoDeEspirito;
 
+    // constructor
+
+    public Gato(String nome, String cor, int altura, double peso, String estadoDeEspirito) {
+        this.nome = nome;
+        this.cor = cor;
+        this.altura = altura;
+        this.peso = peso;
+        this.estadoDeEspirito = estadoDeEspirito;
+
+        numeroDeGatos++;
+    }
+
+
     // Metodos
 
     public void comer(){}
