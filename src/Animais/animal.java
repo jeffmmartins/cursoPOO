@@ -10,6 +10,6 @@ public class animal {
     public void dormir(){}
     public void comer(){}
     public void soar(){
-        System.out.println("Piu Piu");
+        System.out.println(" ");
     }
 }
