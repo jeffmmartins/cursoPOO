@@ -1,15 +1,15 @@
 package Animais;
 
 public class animal {
-    private String nome;
-    private String cor;
-    private int altura;
-    private double peso;
-    private String estadoDeEspirito;
+    protected String nome;
+    protected String cor;
+    protected int altura;
+    protected double peso;
+    protected String estadoDeEspirito;
 
-    public void dormir(){}
-    public void comer(){}
-    public void soar(){
+    protected void dormir(){}
+    protected void comer(){}
+    protected void soar(){
         System.out.println(" ");
     }
 }
