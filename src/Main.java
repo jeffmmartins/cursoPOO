@@ -1,4 +1,6 @@
 import Animais.Cachorro;
+import Animais.Gato;
+import Animais.Passaro;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -10,6 +12,11 @@ public class Main {
         System.out.println(variavelByte);
 
         Cachorro cachorro1 = new Cachorro();
+        Gato gato1 = new Gato("Felix", "marrom",22.0);
+        Passaro passaro1 = new Passaro("cleiton", "amarelo", 22.0);
+
+        gato1.soar();
+        passaro1.soar();
         System.out.println(cachorro1.getNumeroDeCachorros());
         Cachorro cachorro2 = new Cachorro("Pupy", "marron" , 5, 5.5, 1, "nada");
         System.out.println(cachorro2.getNumeroDeCachorros());
