@@ -14,5 +14,11 @@ public class Main {
         System.out.printf("%.4f%n", y);
         System.out.println("Resultado = " + y + " metros");
         System.out.printf("Resultado = %.3f metros%n", y);
+
+        String nome = "Jeff";
+        int idade = 56;
+        double renda = 4.000;
+
+        System.out.printf("%s tem %d anos e sua renda é %.2f%n", nome, idade, renda);
         }
 }
