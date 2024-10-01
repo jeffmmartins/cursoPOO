@@ -1,6 +1,7 @@
 import Animais.Cachorro;
 import Animais.Gato;
 import Animais.Passaro;
+import Loja.PetShop;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -14,6 +15,10 @@ public class Main {
         Cachorro cachorro1 = new Cachorro();
         Gato gato1 = new Gato("Felix", "marrom",22.0);
         Passaro passaro1 = new Passaro("cleiton", "amarelo", 22.0);
+
+        PetShop petShop = new PetShop();
+        petShop.darBanho(gato1);
+        System.out.println(gato1.getEstadoDeEspirito());
 
         gato1.soar();
         passaro1.soar();
