@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Locale;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,5 +12,7 @@ public class Main {
         System.out.println("Boa noite");
         Locale.setDefault(Locale.US);
         System.out.printf("%.4f%n", y);
+        System.out.println("Resultado = " + y + " metros");
+        System.out.printf("Resultado = %.3f metros%n", y);
         }
 }
