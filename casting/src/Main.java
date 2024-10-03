@@ -16,6 +16,10 @@ public class Main {
         System.out.println("Digite seu nome: ");
         input = sc.next();
         System.out.println("Seu nome é: " + input);
+        int idade;
+        System.out.println("Digite sua idade: ");
+        idade = sc.nextInt();
+        System.out.println("Sua idade é: " + idade);
 
         sc.close();
     }
