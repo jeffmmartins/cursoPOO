@@ -10,7 +10,7 @@ public class Main {
         System.out.println(x);
         System.out.printf("%.2f%n", y);
         System.out.println("Boa noite");
-        Locale.setDefault(Locale.US);
+        //Locale.setDefault(Locale.US);
         System.out.printf("%.4f%n", y);
         System.out.println("Resultado = " + y + " metros");
         System.out.printf("Resultado = %.3f metros%n", y);
@@ -20,5 +20,22 @@ public class Main {
         double renda = 4.000;
 
         System.out.printf("%s tem %d anos e sua renda é %.2f%n", nome, idade, renda);
+
+        String product1 = "computer";
+        String product2 = "office desk";
+
+        int age = 30;
+        int code = 5230;
+        char gender = 'M';
+
+        double price1 = 2100.0;
+        double price2 = 650.50;
+        double measure = 53.234567;
+
+        System.out.printf("Products:\n%s which is price $ %f\n%s which is price %f\n" +
+                "Record: %d years old. code %d and gender %s\n measure with decimal places: %f\n " +
+                "Rouded: %.3f%n", product1,price1,product2,price2,age,code,gender,measure,measure);
+        Locale.setDefault(Locale.US);
+        System.out.printf("Us decimal point %.3f",measure);
         }
 }
