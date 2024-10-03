@@ -21,6 +21,14 @@ public class Main {
         idade = sc.nextInt();
         System.out.println("Sua idade é: " + idade);
 
+        String texto1, texto2;
+        sc.nextLine();
+        texto1 = sc.nextLine();
+        texto2 = sc.nextLine();
+        System.out.println("DADOS DIGITADOS");
+        System.out.println(texto1);
+        System.out.println(texto2);
+
         sc.close();
     }
 }
