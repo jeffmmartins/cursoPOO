@@ -37,5 +37,12 @@ public class Main {
                 "Rouded: %.3f%n", product1,price1,product2,price2,age,code,gender,measure,measure);
         Locale.setDefault(Locale.US);
         System.out.printf("Us decimal point %.3f",measure);
+
+        int a, b;
+        double resultado;
+        a = 5;;
+        b = 2;
+        resultado = a/b;
+        System.out.println(resultado);
         }
 }
