@@ -1,22 +1,26 @@
 import java.util.Scanner;
+import entities.Triangle;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Triangle x, y;
+        x = new Triangle();
+        y = new Triangle();
 
         System.out.println("Enter the measures of triangle x");
-        int ladoA = sc.nextInt();
-        int ladoB = sc.nextInt();
-        int ladoC = sc.nextInt();
+        x.a = sc.nextInt();
+        x.b = sc.nextInt();
+        x.c = sc.nextInt();
         System.out.println("Enter the measures of triangle y");
-        int ladoD = sc.nextInt();
-        int ladoE = sc.nextInt();
-        int ladoF = sc.nextInt();
+        y.a = sc.nextInt();
+        y.b = sc.nextInt();
+        y.c = sc.nextInt();
 
-        int triangle1 = triangulo1(ladoA,ladoB,ladoC);
-        int triangle2 = triangulo2(ladoD,ladoE,ladoF);
+        int triangle1 = triangulo1(x.a,x.b,x.c);
+        int triangle2 = triangulo2(y.a,y.b,y.c);
 
         System.out.println("Triangle x area: " + triangle1);
         System.out.println("Triangle x area: " + triangle2);
