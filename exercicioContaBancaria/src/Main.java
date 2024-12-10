@@ -8,16 +8,24 @@ import java.util.concurrent.CopyOnWriteArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+
         ContaBancaria conta = new ContaBancaria();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter account number: ");
-        int numberAccount = sc.nextInt();
+        conta.setConta(sc.nextInt());
         System.out.println("Enter account holder: ");
-        String name = sc.next();
+        conta.setNome(sc.next());
         System.out.println("Enter initial deposit value: ");
-        int deposit = sc.nextInt();
+        conta.setDepositoInicial(sc.nextInt());
+
+        System.out.println(conta.getConta());
+        System.out.println(conta.getNome());
+        System.out.println(conta.getDepositoInicial());
+
         sc.close();
+
 
     }
 }
