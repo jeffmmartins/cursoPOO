@@ -1,5 +1,6 @@
 import Entities.ContaBancaria;
 
+import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -17,12 +18,21 @@ public class Main {
         conta.setConta(sc.nextInt());
         System.out.println("Enter account holder: ");
         conta.setNome(sc.next());
+        sc.nextLine();
         System.out.println("Enter initial deposit value: ");
         conta.setDepositoInicial(sc.nextInt());
 
-        System.out.println(conta.getConta());
-        System.out.println(conta.getNome());
-        System.out.println(conta.getDepositoInicial());
+        System.out.println("Account data:");
+        System.out.println("Account: " + conta.getConta() + ", Holder: " + conta.getNome() + ", Balance: " + conta.getDepositoInicial());
+
+        System.out.println("Enter deposit Value: ");
+        conta.DepositoValor(sc.nextInt());
+        System.out.println("Updated account value:");
+        System.out.println("Account: " + conta.getConta() + ", Holder: " + conta.getNome() + ", Balance: " + conta.getDepositoInicial());
+
+        System.out.println("Enter a withraw value: ");
+        conta.saque(sc.nextInt());
+        System.out.println("Account: " + conta.getConta() + ", Holder: " + conta.getNome() + ", Balance: " + conta.getDepositoInicial());
 
         sc.close();
 
