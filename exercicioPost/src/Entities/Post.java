@@ -1,5 +1,6 @@
 package Entities;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class Post {
 
     public Post(){}
 
-    private List<Comment> comments;
+    private List<Comment> comments = new ArrayList<>();
 
     public Post(Date moment, String title, String content, Integer like) {
         this.moment = moment;
@@ -55,5 +56,18 @@ public class Post {
     public List<Comment> getComments() {
         return comments;
     }
+
+    // metodo para adicionar um comentário
+    public void addComment(Comment coment){
+        comments.add(coment);
+    }
+
+    //  metodo para remover um comentário
+    public void removeComment (Comment coment){
+        comments.remove(coment);
+    }
+
+
+
 
 }
