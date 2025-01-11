@@ -1,10 +1,13 @@
 package Entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Post {
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
     private Date moment;
     private String title;
     private String content;
@@ -67,5 +70,17 @@ public class Post {
         comments.remove(coment);
     }
 
-
+    // utilizando a class stringbuilder;
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        // append - acresscentar no final;
+        sb.append(title + "\n");
+        sb.append(like + "likes " +sdf.format(moment) +" \n");
+        sb.append(content + "\n");
+        sb.append("Comments: ");
+        for (Comment c : comments){
+            sb.append(c.getText() + "\n");
+        }
+        return sb.toString();
+    }
 }
