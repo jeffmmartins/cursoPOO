@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Post {
+    // constante
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     private Date moment;
@@ -13,6 +14,7 @@ public class Post {
     private String content;
     private Integer like;
 
+    // contructor padrão
     public Post(){}
 
     private List<Comment> comments = new ArrayList<>();
