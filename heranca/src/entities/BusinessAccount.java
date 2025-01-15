@@ -25,4 +25,11 @@ public class BusinessAccount extends Account{
         balance += amount - 10.0;
         }
     }
+
+    @Override
+    public void withdraw(double amount) {
+        // Isso é como se fosse um "pai" da nossa função. Significa que vamos usar a função de saque original, que já existia antes
+        super.withdraw(amount);
+        balance -= 2;
+    }
 }
