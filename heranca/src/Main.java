@@ -11,7 +11,8 @@ public class Main {
 
         Account acc = new Account(1001, "Jeff", 0.0);
         BusinessAccount bacc = new BusinessAccount(1002, "Vera", 0.0 , 500.00);
-
+        Account x = new Account(2,"Chico", 1000.0);
+        Account y = new SavingAccount(3,"Josefa", 1000.0,  0.01);
         // upcasting: objeto businessAccoun e atribuilo na variavel tipo account
 
         Account acc1 = bacc;
@@ -46,5 +47,8 @@ public class Main {
         Account acc8 = new BusinessAccount(1012,"Maria", 1000.0, 500.0);
         acc8.withdraw(200.00);
         System.out.println(acc8.getBalance());
+
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
     }
 }
