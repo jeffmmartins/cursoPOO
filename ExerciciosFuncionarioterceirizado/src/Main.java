@@ -1,4 +1,5 @@
 import Entities.Employee;
+import Entities.OutsourcedEmployee;
 import jdk.jshell.execution.LoaderDelegate;
 
 import java.util.ArrayList;
@@ -22,10 +23,10 @@ public class Main {
         int n = sc.nextInt();
 
         // for para percorrer a lista
-        for (int  i = 0 ; i<=n; i++){
+        for (int  i = 0 ; i<n; i++){
             System.out.println("Employee  #" + i + "data: ");
             System.out.println("Outsourced (y/n) ? ");
-            char ch = sc.next().charAt(1);
+            char ch = sc.next().charAt(0);
             System.out.println("Name: ");
             sc.nextLine();
             String name = sc.nextLine();
@@ -36,9 +37,19 @@ public class Main {
             if (ch == 'y'){
                 System.out.println("Additional Charge: ");
                 double additionalCharge = sc.nextDouble();
+                Employee emp = new OutsourcedEmployee(name,hours,valuePerHour,additionalCharge);
+                list.add(emp);
+            }
+            else {
+                list.add(new Employee(name,hours,valuePerHour));
             }
         }
+        System.out.println();
+        System.out.println("Payments: ");
 
+        for (Employee emp : list){
+            System.out.println(emp.getName() + ": - $" +String.format("%.2f",emp.payment()));
+        }
 
         sc.close();
     }
