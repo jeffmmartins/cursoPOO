@@ -26,7 +26,7 @@ public class Main {
         for (int  i = 0 ; i<n; i++){
             System.out.println("Employee  #" + i + "data: ");
             System.out.println("Outsourced (y/n) ? ");
-            char ch = sc.next().charAt(0);
+            char ch = sc.next().charAt(0); // charAt(0) está se referindo a posição.
             System.out.println("Name: ");
             sc.nextLine();
             String name = sc.nextLine();
