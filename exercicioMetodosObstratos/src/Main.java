@@ -1,5 +1,10 @@
 import Entiites.enums.Color;
+import Entities.Circle;
+import Entities.Rectangle;
+import Entities.Shape;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,6 +15,8 @@ public class Main {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
+        List<Shape> list = new ArrayList<>();
 
         System.out.println("Enter the number of shape: ");
         int n = sc.nextInt();
@@ -24,8 +31,19 @@ public class Main {
                 System.out.println("Width: ");
                 Double widht = sc.nextDouble();
                 System.out.println("Heigth: ");
-                Double Height = sc.nextDouble();
+                Double height = sc.nextDouble();
+                list.add(new Rectangle(color,widht,height));
+            } else {
+                System.out.println("Radius: ");
+                double radius = sc.nextDouble();
+                list.add(new Circle(color, radius));
             }
+        }
+
+        System.out.println();
+        System.out.println("Shapes Area: ");
+        for (Shape shape : list){
+            System.out.println(String.format("%.2f", shape.area()));
         }
 
         sc.close();
