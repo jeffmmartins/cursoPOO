@@ -38,4 +38,9 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff,TimeUnit.MICROSECONDS);
     }
 
+    public void updatDates(Date checkIn, Date checkOut){
+        this.checkin = checkIn;
+        this.checkout = checkOut;
+    }
+
 }
