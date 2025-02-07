@@ -17,8 +17,17 @@ public class Main {
             System.out.println("Indiviidual or Company (i/c)? ");
             char letter = sc.next().charAt(0);
             sc.nextLine();
-            System.out.println("Name");
-            String  name = sc.nextLine();
+
+
+            if (letter == 'i'){
+                System.out.println("Name");
+                String  name = sc.nextLine();
+                System.out.println("Anual Income: ");
+                double anualIncome = sc.nextDouble();
+                System.out.println("Health expenditures: ");
+                double healthExpednditures = sc.nextDouble();
+
+            }
         }
 
 
