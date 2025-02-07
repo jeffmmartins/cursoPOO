@@ -22,7 +22,10 @@ public class Iindividual extends TaxPayer{
     public Double tax(){
         Double anualIncome = getAnualIncome();
         Double healthexpenditures = getHealthExpenditures();
-        return (anualIncome * 0.25) - (healthexpenditures * 0.50);
+        if (anualIncome < 20000.00) {
+            return (anualIncome * 0.15) - (healthexpenditures * 0.50);
+        }else {
+            return (anualIncome * 0.25) - (healthexpenditures * 0.50);
+        }
     }
-
 }

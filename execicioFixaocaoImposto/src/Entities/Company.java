@@ -1,5 +1,7 @@
 package Entities;
 
+import com.sun.source.tree.IfTree;
+
 public class Company extends TaxPayer {
     private Integer numberOfEmployees;
 
@@ -20,6 +22,13 @@ public class Company extends TaxPayer {
 
     @Override
     public Double tax(){
-        return 0.0;
+       Double anualIncome = getAnualIncome();
+       int numberOfEmployees = getNumberOfEmployees();
+       if (numberOfEmployees > 10 ){
+           return anualIncome * 0.14;
+       }else {
+           return anualIncome * 0.16;
+       }
+
     }
 }
