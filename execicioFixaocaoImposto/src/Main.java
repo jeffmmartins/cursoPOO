@@ -1,3 +1,4 @@
+import Entities.Company;
 import Entities.Iindividual;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class Main {
         System.out.println("Enter the number of tax payers: ");
         int numberTax = sc.nextInt();
 
-        for (int i = 0 ; numberTax < i; i++){
+        for (int i = 0 ; numberTax > i; i++){
             System.out.println("Tax payer #" + (i+1)  + " data: ");
             System.out.println("Indiviidual or Company (i/c)? ");
             char letter = sc.next().charAt(0);
@@ -32,6 +33,7 @@ public class Main {
                 System.out.println("Health expenditures: ");
                 double healthExpednditures = sc.nextDouble();
                 Iindividual individual = new Iindividual(name, anualIncome, healthExpednditures);
+                list.add(individual);
             } else {
                 System.out.println("Name");
                 String  name = sc.nextLine();
@@ -39,6 +41,8 @@ public class Main {
                 double anualIncome = sc.nextDouble();
                 System.out.println("Number Of employees: ");
                 int employee = sc.nextInt();
+                Company company = new Company(name, anualIncome, employee);
+                list.add(company);
             }
         }
 
