@@ -1,3 +1,7 @@
+import Entities.Iindividual;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,6 +12,7 @@ public class Main {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        List list = new ArrayList<>();
 
         System.out.println("Enter the number of tax payers: ");
         int numberTax = sc.nextInt();
@@ -26,7 +31,14 @@ public class Main {
                 double anualIncome = sc.nextDouble();
                 System.out.println("Health expenditures: ");
                 double healthExpednditures = sc.nextDouble();
-
+                Iindividual individual = new Iindividual(name, anualIncome, healthExpednditures);
+            } else {
+                System.out.println("Name");
+                String  name = sc.nextLine();
+                System.out.println("Anual Income: ");
+                double anualIncome = sc.nextDouble();
+                System.out.println("Number Of employees: ");
+                int employee = sc.nextInt();
             }
         }
 
