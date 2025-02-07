@@ -20,7 +20,9 @@ public class Iindividual extends TaxPayer{
 
     @Override
     public Double tax(){
-        return 0.0;
+        Double anualIncome = getAnualIncome();
+        Double healthexpenditures = getHealthExpenditures();
+        return (anualIncome * 0.25) - (healthexpenditures * 0.50);
     }
 
 }
