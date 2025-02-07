@@ -29,5 +29,8 @@ public abstract class TaxPayer {
 
     public abstract Double tax();
 
-
+    @Override
+    public String toString(){
+        return "text";
+    }
 }
