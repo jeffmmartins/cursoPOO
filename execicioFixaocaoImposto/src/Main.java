@@ -1,5 +1,6 @@
 import Entities.Company;
 import Entities.Iindividual;
+import Entities.TaxPayer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,8 @@ public class Main {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        List list = new ArrayList<>();
+        List<TaxPayer> list = new ArrayList<>();
+
 
         System.out.println("Enter the number of tax payers: ");
         int numberTax = sc.nextInt();
@@ -45,8 +47,18 @@ public class Main {
                 list.add(company);
             }
         }
+        System.out.println();
 
+        System.out.println("Taxes Paid: ");
+        double totalTaxes = 0.00;
+        for (TaxPayer taxpayer : list){
+            double tax = taxpayer.tax();
+            System.out.println(taxpayer.getName() + ": $ " + String.format("%.2f", tax));
+            totalTaxes += tax;
+        }
 
+        System.out.println();
+        System.out.println("TOTAL TAXES: $ " + String.format("%.2f", totalTaxes));
         sc.close();
     }
 }

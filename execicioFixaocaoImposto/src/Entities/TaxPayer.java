@@ -31,6 +31,7 @@ public abstract class TaxPayer {
 
     @Override
     public String toString(){
-        return "text";
+        return "Taxed Paid: " +
+                name + ": $  " + String.format("%.2f",tax());
     }
 }
