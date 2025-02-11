@@ -9,6 +9,7 @@ public class Reservation {
     private Date checkin;
     private Date checkout;
 
+    // Todas as instâncias de Reservation compartilham e usam o mesmo formato de data.
     public static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Reservation(){}
@@ -51,6 +52,7 @@ public class Reservation {
         return " Room "
                 + roomNumber
                 + ", chheckin "
+                //É um método da classe SimpleDateFormat. Ele pega um objeto Date como entrada e retorna uma string representando a data formatada de acordo com o padrão especificado no SimpleDateFormat
                 + sdf.format(checkin)
                 + ", checkout "
                 + sdf.format(checkout)

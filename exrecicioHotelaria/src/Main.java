@@ -1,4 +1,5 @@
 import jdk.jshell.execution.LoaderDelegate;
+import model.entities.Reservation;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,6 +14,7 @@ public class Main {
 
 
         Scanner sc = new Scanner(System.in);
+        //sempre que for mecher com data devo instanciar simpleDateFormat
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         System.out.println("Room number: ");
@@ -21,6 +23,14 @@ public class Main {
         Date checkin = sdf.parse(sc.next());
         System.out.println("Check out date (dd/MM/yyyy): ");
         Date chekOut = sdf.parse(sc.next());
+
+        //metodo muito ruim
+        if (!chekOut.after(checkin)) {
+            System.out.println("Error in reservation ");
+        }else {
+            Reservation reservation = new Reservation(number,checkin,chekOut);
+            System.out.println("Reservation: " + reservation);
+        }
 
         sc.close();
     }
