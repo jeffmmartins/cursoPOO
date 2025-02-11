@@ -45,7 +45,7 @@ public class Reservation {
         this.checkin = checkIn;
         this.checkout = checkOut;
     }
-     // metodo tostring é um sobreposição
+     // metodo tostring é um sobreposição no tostring sempre colocar @override
     @Override
     public String toString(){
         return " Room "
