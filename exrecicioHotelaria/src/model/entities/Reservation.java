@@ -39,7 +39,7 @@ public class Reservation {
     // nesse metodo é possivel retornar em milesegundos
     public Long duration(){
         Long diff = checkout.getTime() - checkin.getTime();
-        return TimeUnit.DAYS.convert(diff,TimeUnit.MICROSECONDS);
+        return TimeUnit.DAYS.convert(diff,TimeUnit.MILLISECONDS);
     }
 
     public void updatDates(Date checkIn, Date checkOut){
