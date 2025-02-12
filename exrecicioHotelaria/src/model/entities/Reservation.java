@@ -42,9 +42,19 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff,TimeUnit.MILLISECONDS);
     }
 
-    public void updatDates(Date checkIn, Date checkOut){
+    public String updatDates(Date checkIn, Date checkOut){
+        Date now = new Date()
+;
+        if (checkin.before(now) || checkout.before(now)){
+            return "Rservation dates for update must be future dates";
+        }
+        if (!checkout.after(checkin)){
+            return "Checkout date must be after checkin date ";
+        }
+
         this.checkin = checkIn;
         this.checkout = checkOut;
+        return null; // criterio mostrando que a operação não deu nenhum erro. pois é pra retornar uma string.
     }
      // metodo tostring é um sobreposição no tostring sempre colocar @override
     @Override
