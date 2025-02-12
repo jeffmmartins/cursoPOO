@@ -39,6 +39,17 @@ public class Main {
             System.out.println("Check out date (dd/MM/yyyy): ");
             chekOut = sdf.parse(sc.next());
 
+            Date now = new Date();
+
+            if (checkin.before(now) || chekOut.before(now)){
+                System.out.println("erro in reservation: Reservation dates");
+            }else if (!chekOut.after(checkin)){
+                System.out.println("erro in reservation: Reservation dates checkout");
+            } else {
+                reservation.updatDates(checkin,chekOut);
+                System.out.println("Reservation: " + reservation);
+            }
+
             // metodo responsavel para atualizar as datas
             reservation.updatDates(checkin, chekOut);
             System.out.println("Reservation: " + reservation);
