@@ -42,7 +42,7 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff,TimeUnit.MILLISECONDS);
     }
 
-    public String updatDates(Date checkIn, Date checkOut){
+    public void updatDates(Date checkIn, Date checkOut){
         Date now = new Date()
 ;
         if (checkin.before(now) || checkout.before(now)){
