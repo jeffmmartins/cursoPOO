@@ -46,15 +46,15 @@ public class Reservation {
         Date now = new Date()
 ;
         if (checkin.before(now) || checkout.before(now)){
-            return "Rservation dates for update must be future dates";
+            // lancçando uma exceção do java,  usa quando os argumentos que são passados para o paramentro são invalidos.
+            throw new IllegalArgumentException("Reservation dates for updates ...");
         }
         if (!checkout.after(checkin)){
-            return "Checkout date must be after checkin date ";
+            throw new IllegalArgumentException("Checkout date must be after checkin date ");
         }
 
         this.checkin = checkIn;
         this.checkout = checkOut;
-        return null; // criterio mostrando que a operação não deu nenhum erro. pois é pra retornar uma string.
     }
      // metodo tostring é um sobreposição no tostring sempre colocar @override
     @Override

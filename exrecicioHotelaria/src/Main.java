@@ -16,33 +16,35 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         //sempre que for mecher com data devo instanciar simpleDateFormat
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
-        System.out.println("Room number: ");
-        int number = sc.nextInt();
-        System.out.println("Checkin date (dd/MM/yyyy): ");
-        Date checkin = sdf.parse(sc.next());
-        System.out.println("Check out date (dd/MM/yyyy): ");
-        Date chekOut = sdf.parse(sc.next());
-
         try {
-        Reservation reservation = new Reservation(number, checkin, chekOut);
-        System.out.println("Reservation: " + reservation);
+            System.out.println("Room number: ");
+            int number = sc.nextInt();
+            System.out.println("Checkin date (dd/MM/yyyy): ");
+            Date checkin = sdf.parse(sc.next());
+            System.out.println("Check out date (dd/MM/yyyy): ");
+            Date chekOut = sdf.parse(sc.next());
 
-        System.out.println();
-        System.out.println("Enter data to update the reservation: ");
-        System.out.println("Checkin date (dd/MM/yyyy): ");
-        checkin = sdf.parse(sc.next());
-        sc.nextLine();
-        System.out.println("Check out date (dd/MM/yyyy): ");
-        chekOut = sdf.parse(sc.next());
 
-        // metodo responsavel para atualizar as datas
-        reservation.updatDates(checkin, chekOut);
-        System.out.println("Reservation: " + reservation);
-    } catch(ParseException e){
-        System.out.println("Invalid Date Format");
-    }
+            Reservation reservation = new Reservation(number, checkin, chekOut);
+            System.out.println("Reservation: " + reservation);
 
-        sc.close();
+            System.out.println();
+            System.out.println("Enter data to update the reservation: ");
+            System.out.println("Checkin date (dd/MM/yyyy): ");
+            checkin = sdf.parse(sc.next());
+            sc.nextLine();
+            System.out.println("Check out date (dd/MM/yyyy): ");
+            chekOut = sdf.parse(sc.next());
+
+            // metodo responsavel para atualizar as datas
+            reservation.updatDates(checkin, chekOut);
+            System.out.println("Reservation: " + reservation);
+        } catch (ParseException e) {
+            System.out.println("Invalid Date Format");
+            //coloca outra exceção capturando essa exceçao do metodo updatesDAte. ou seja vai tentar o metodo algo dê errado cai nesse catch.
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error in Reservation " + e.getMessage());
+            sc.close();
+        }
     }
 }
