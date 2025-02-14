@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.exception.DomainException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -47,10 +49,10 @@ public class Reservation {
 ;
         if (checkin.before(now) || checkout.before(now)){
             // lancçando uma exceção do java,  usa quando os argumentos que são passados para o paramentro são invalidos.
-            throw new IllegalArgumentException("Reservation dates for updates ...");
+            throw new DomainException("Reservation dates for updates ...");
         }
         if (!checkout.after(checkin)){
-            throw new IllegalArgumentException("Checkout date must be after checkin date ");
+            throw new DomainException("Checkout date must be after checkin date ");
         }
 
         this.checkin = checkIn;
