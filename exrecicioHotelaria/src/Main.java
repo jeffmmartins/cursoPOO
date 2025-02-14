@@ -23,8 +23,8 @@ public class Main {
         Date checkin = sdf.parse(sc.next());
         System.out.println("Check out date (dd/MM/yyyy): ");
         Date chekOut = sdf.parse(sc.next());
-
-        Reservation reservation = new Reservation(number,checkin,chekOut);
+    try {
+        Reservation reservation = new Reservation(number, checkin, chekOut);
         System.out.println("Reservation: " + reservation);
 
         System.out.println();
@@ -38,7 +38,9 @@ public class Main {
         // metodo responsavel para atualizar as datas
         reservation.updatDates(checkin, chekOut);
         System.out.println("Reservation: " + reservation);
+    } catch(){
 
+    }
 
         sc.close();
     }
