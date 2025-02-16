@@ -27,6 +27,7 @@ public abstract class TaxPayer {
         this.anualIncome = anualIncome;
     }
 
+    // quando colocamos o metodo abstract a classe também precisa ser abstract.
     public abstract Double tax();
 
     @Override
