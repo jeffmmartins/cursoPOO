@@ -44,10 +44,11 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff,TimeUnit.MILLISECONDS);
     }
 
-    public void updatDates(Date checkIn, Date checkOut){
-        Date now = new Date()
-;
-        if (checkin.before(now) || checkout.before(now)){
+    public void updatDates(Date checkIn, Date checkOut) throws DomainException{
+        Date now = new Date();
+
+        // apenas propagando a exceção na assinatura do metodo , pois vai ser tratado no main.
+        if (checkin.before(now) || checkout.before(now)) {
             // lancçando uma exceção do java,  usa quando os argumentos que são passados para o paramentro são invalidos.
             throw new DomainException("Reservation dates for updates ...");
         }

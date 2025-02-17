@@ -1,5 +1,6 @@
 import jdk.jshell.execution.LoaderDelegate;
 import model.entities.Reservation;
+import model.exception.DomainException;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -42,7 +43,7 @@ public class Main {
         } catch (ParseException e) {
             System.out.println("Invalid Date Format");
             //coloca outra exceção capturando essa exceçao do metodo updatesDAte. ou seja vai tentar o metodo algo dê errado cai nesse catch.
-        } catch (IllegalArgumentException e) {
+        } catch (DomainException e) {
             System.out.println("Error in Reservation " + e.getMessage());
             sc.close();
         }
