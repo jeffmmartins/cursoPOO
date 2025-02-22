@@ -48,4 +48,12 @@ public class Account {
     public void setWisthhDrawLimit(Double wisthhDrawLimit) {
         this.wisthhDrawLimit = wisthhDrawLimit;
     }
+
+    public void deposit(){
+
+    }
+
+    public void withDraw (){
+
+    }
 }
