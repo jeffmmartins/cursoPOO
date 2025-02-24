@@ -25,6 +25,10 @@ public class Main {
 
         Account acc = new Account(number, name, balance, limit);
 
+        System.out.println();
+        System.out.println("Infrme a quatia para saque");
+        double amount = sc.nextDouble();
+
 
         sc.close();
     }
