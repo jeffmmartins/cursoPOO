@@ -1,3 +1,5 @@
+import Entities.Account;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -20,6 +22,8 @@ public class Main {
         double balance = sc.nextDouble();
         System.out.println("WithDraw limit: ");
         double limit = sc.nextDouble();
+
+        Account acc = new Account(number, name, balance, limit);
 
 
         sc.close();
