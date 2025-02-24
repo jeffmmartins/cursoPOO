@@ -1,5 +1,7 @@
 import Entities.Account;
+import exception.BusinessException;
 
+import java.sql.BatchUpdateException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -28,6 +30,14 @@ public class Main {
         System.out.println();
         System.out.println("Infrme a quatia para saque");
         double amount = sc.nextDouble();
+
+        try {
+            acc.withDraw(amount);
+            System.out.println("Novo saldo: %.2f%n", acc.getBalance());
+        }
+        catch (BusinessException e){
+            System.out.println(e.getMessage());
+        }
 
 
         sc.close();

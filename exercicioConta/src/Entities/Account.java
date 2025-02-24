@@ -50,8 +50,8 @@ public class Account {
     }
 
     // aplicar a lógica com try e catch.
-    public void deposit(Double deposit){
-
+    public void deposit(Double amount){
+        balance += amount;
     }
 
     public void withDraw (){
