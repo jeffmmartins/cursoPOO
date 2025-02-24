@@ -28,12 +28,12 @@ public class Main {
         Account acc = new Account(number, name, balance, limit);
 
         System.out.println();
-        System.out.println("Infrme a quatia para saque");
+        System.out.println("Infrme a quantia para saque");
         double amount = sc.nextDouble();
 
         try {
             acc.withDraw(amount);
-            System.out.println("Novo saldo: %.2f%n", acc.getBalance());
+            System.out.printf("Novo saldo: %.2f%n", acc.getBalance());
         }
         catch (BusinessException e){
             System.out.println(e.getMessage());
