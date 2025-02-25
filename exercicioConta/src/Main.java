@@ -35,6 +35,7 @@ public class Main {
             acc.withDraw(amount);
             System.out.printf("Novo saldo: %.2f%n", acc.getBalance());
         }
+        // pega a mensagem armazenada no businessException
         catch (BusinessException e){
             System.out.println(e.getMessage());
         }
