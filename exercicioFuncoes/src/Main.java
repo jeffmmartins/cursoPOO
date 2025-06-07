@@ -19,8 +19,8 @@ public class Main {
         y.b = sc.nextInt();
         y.c = sc.nextInt();
 
-        int triangle1 = triangulo1(x.a,x.b,x.c);
-        int triangle2 = triangulo2(y.a,y.b,y.c);
+        double triangle1 = triangulo1(x.a,x.b,x.c);
+        double triangle2 = triangulo2(y.a,y.b,y.c);
 
         System.out.println("Triangle x area: " + triangle1);
         System.out.println("Triangle x area: " + triangle2);
@@ -28,17 +28,17 @@ public class Main {
         sc.close();
     }
 
-    public static int triangulo1 (int a, int b, int c){
-        int resultTriangle1= (a+b+c)/2;
+    public static double triangulo1 (double a, double b, double c){
+        double resultTriangle1= (a+b+c)/2.0;
         return resultTriangle1;
     }
 
-    public static int triangulo2 (int d, int e, int f){
-        int resultTriangle2= (d+e+f)/2;
+    public static double triangulo2 (double d, double e, double f){
+        double resultTriangle2= (d+e+f)/2;
         return resultTriangle2;
     }
 
-    public static void showResult(int a, int b){
+    public static void showResult(double a, double b){
         if (a>b){
             System.out.println("Triangle x is higher");
         }else{

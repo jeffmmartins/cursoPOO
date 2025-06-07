@@ -13,10 +13,7 @@ public class ContaBancaria {
         this.conta = conta;
         this.depositoInicial = depositoInicial;
     }
-
-    public void setConta(int conta){
-        this.conta = conta;
-    }
+    
 
     public int getConta(){
         return conta;
@@ -30,9 +27,6 @@ public class ContaBancaria {
         return nome;
     }
 
-    public void setDepositoInicial(int depositoInicial){
-        this.depositoInicial = depositoInicial;
-    }
 
     public int getDepositoInicial(){
         return depositoInicial;
