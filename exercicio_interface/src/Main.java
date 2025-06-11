@@ -1,3 +1,6 @@
+import model.entities.CarRental;
+import model.entities.Vehicle;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -21,6 +24,8 @@ public class Main {
         LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
         System.out.println("Retorno: (dd/MM/yyyy hh:mm)");
         LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
+
+        CarRental cr = new CarRental(start, finish, new Vehicle(carModel));
 
         sc.close();
     }
