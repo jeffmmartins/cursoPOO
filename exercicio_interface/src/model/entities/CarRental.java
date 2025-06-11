@@ -12,12 +12,11 @@ public class CarRental {
     private Invoice invoice;
 
     public CarRental(){}
-
-    public CarRental(LocalDateTime start, LocalDateTime finish, Vehicle vehicle, Invoice invoice) {
+    // fatura quanod se cira o aluguem nao existe ainda, apagar a fatura no cnstrutor
+    public CarRental(LocalDateTime start, LocalDateTime finish, Vehicle vehicle) {
         this.start = start;
         this.finish = finish;
         this.vehicle = vehicle;
-        this.invoice = invoice;
     }
 
     public LocalDateTime getStart() {
