@@ -1,9 +1,9 @@
 package model.entities;
 
-public class vehicle {
+public class Vehicle {
     private String model;
 
-    public vehicle(String model) {
+    public Vehicle(String model) {
         this.model = model;
     }
 
