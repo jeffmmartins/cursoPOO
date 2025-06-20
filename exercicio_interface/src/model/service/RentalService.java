@@ -3,7 +3,6 @@ package model.service;
 import model.entities.CarRental;
 import model.entities.Invoice;
 
-import javax.net.ssl.HostnameVerifier;
 import java.time.Duration;
 
 public class RentalService {
@@ -11,12 +10,12 @@ public class RentalService {
     private Double pricePerHour;
     private Double pricePerDay;
 
-    private BrazilTaxService brazilTaxService;
+    private TaxService taxService;
 
-    public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService brazilTaxService) {
+    public RentalService(Double pricePerHour, Double pricePerDay, TaxService taxService) {
         this.pricePerHour = pricePerHour;
         this.pricePerDay = pricePerDay;
-        this.brazilTaxService = brazilTaxService;
+        this.taxService = taxService;
     }
 
     public void processInvoice(CarRental carRental){
@@ -31,7 +30,7 @@ public class RentalService {
             basicpaymente = pricePerDay * Math.ceil(hours/24.0);
         }
 
-        double tax = brazilTaxService.tax(basicpaymente);
+        double tax = TaxService.tax(basicpaymente);
         carRental.setInvoice(new Invoice(basicpaymente, tax));
     }
 }
