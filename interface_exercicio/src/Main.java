@@ -1,4 +1,5 @@
 import entities.Contract;
+import entities.Installments;
 import services.ContractService;
 
 import java.time.LocalDate;
@@ -32,6 +33,11 @@ public class Main {
         ContractService contractService = new ContractService(null);
 
         contractService.processContract(contract, 3);
+
+        System.out.println("Parcelas: ");
+        for (Installments installments : contract.getInstallments()){
+            System.out.println(installments);
+        }
 
         sc.close();
 
