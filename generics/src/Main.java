@@ -9,14 +9,15 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        PrintService ps = new PrintService();
+        //Quando utilizar o generics usar o <>
+        PrintService<String> ps = new PrintService<>();
 
         System.out.println("How many values: ");
         int n = sc.nextInt();
 
         for (int i = 0 ; i<n ; i++){
             System.out.println("enter a number: ");
-            int value = sc.nextInt();
+            String value = sc.nextLine();
             ps.addValue(value);
         }
 

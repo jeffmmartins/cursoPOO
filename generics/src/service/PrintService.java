@@ -3,15 +3,16 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+// T pode ser o nome que eu quiser, porem tem que usar esse nome em todo o restante da aplicação
+public class PrintService<T>{
 
-    private List<Integer> list = new ArrayList<>();
+    private List<T> list = new ArrayList<>();
 
-    public void addValue(Integer value){
+    public void addValue(T value){
         list.add(value);
     }
 
-    public Integer first(){
+    public T first(){
         if(list.isEmpty()){
             throw new IllegalStateException("List is empty");
         }
