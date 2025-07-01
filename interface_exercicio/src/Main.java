@@ -1,6 +1,7 @@
 import entities.Contract;
 import entities.Installments;
 import services.ContractService;
+import services.PayPalServices;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +31,7 @@ public class Main {
         System.out.print("Entre com os números das parcelas: ");
         int numeroDeParcelas = sc.nextInt();
 
-        ContractService contractService = new ContractService(null);
+        ContractService contractService = new ContractService(new PayPalServices());
 
         contractService.processContract(contract, 3);
 
