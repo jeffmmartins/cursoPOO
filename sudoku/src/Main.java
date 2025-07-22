@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static java.util.stream.Collectors.toMap;
 
@@ -76,6 +77,11 @@ public class Main {
     }
 
     private static void inputNumber() {
+        if (isNull(board)){
+            System.out.println("O jogo ainda não foi inicializado");
+            return;
+        }
+        System.out.println("Informa a coluna em que o numero será inserido");
     }
 
     private static void starteGame(Map<String, String> positions) {
@@ -97,4 +103,15 @@ public class Main {
         board = new Board(spaces);
         System.out.println("O jogo está pronto para começar");
     }
+
+    private static int runUntilGetValidNumber(final int min, final int max){
+        int current = scanner.nextInt();
+        while (current<min || current > max ){
+            System.out.printf("Informe um número entre %s e %s\n", min, max);
+            current = scanner.nextInt();
+        }
+        return current;
+
+    }
+
 }
