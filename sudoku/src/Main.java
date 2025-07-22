@@ -1,9 +1,14 @@
 import model.Board;
+import model.Space;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Objects.nonNull;
 import static java.util.stream.Collectors.toMap;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -35,11 +40,61 @@ public class Main {
            System.out.println("8 - Sair");
 
            option = scanner.nextInt();
+
+           switch (option){
+               case 1 -> starteGame(positions);
+               case 2 -> inputNumber();
+               case 3 -> removeNumber();
+               case 4 -> showCurrentGame();
+               case 5 -> showGameStatus();
+               case 6 -> clearGame();
+               case 7 -> finishGame();
+               case 8 -> System.exit(0);
+               default -> System.out.println("Opção invalida, selecione uma das opções do menun");
+           }
        }
 
 
 
 
 
+    }
+
+    private static void finishGame() {
+    }
+
+    private static void clearGame() {
+    }
+
+    private static void showGameStatus() {
+    }
+
+    private static void showCurrentGame() {
+    }
+
+    private static void removeNumber() {
+    }
+
+    private static void inputNumber() {
+    }
+
+    private static void starteGame(Map<String, String> positions) {
+        if(nonNull(board)){
+            System.out.println("O jogo foi iniciado");
+            return;
+        }
+        List<List<Space>> spaces = new ArrayList<>();
+        for (int i = 0; i < BOARD_LIMIT; i++){
+            spaces.add(new ArrayList<>());
+            for (int j = 0; j < BOARD_LIMIT; j++){
+                String posistionConfig = positions.get("%s, %s".formatted(i, j));
+                int expected = Integer.parseInt(posistionConfig.split(";")[0]);
+                boolean fixed = Boolean.parseBoolean(posistionConfig.split(",")[1]);
+                var currentSpace = new Space(expected, fixed);
+                spaces.get(i).add(currentSpace);
+            }
+        }
+        board = new Board(spaces);
+        System.out.println("O jogo está pronto para começar");
     }
 }
