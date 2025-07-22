@@ -82,6 +82,11 @@ public class Main {
             return;
         }
         System.out.println("Informa a coluna em que o numero será inserido");
+        int col = runUntilGetValidNumber(0,8);
+        System.out.println("Informa a linha em que o numero será inserido");
+        int row = runUntilGetValidNumber(0,8);
+        System.out.printf("Informe o nuemro que vai entrar na posição [%s, %s]\n", col, row);
+        int value = runUntilGetValidNumber(1,9);
     }
 
     private static void starteGame(Map<String, String> positions) {
