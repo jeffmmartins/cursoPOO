@@ -73,10 +73,23 @@ public class Main {
     private static void showCurrentGame() {
     }
 
-    private static void removeNumber() {
+    private static void inputNumber() {
+        if (isNull(board)){
+            System.out.println("O jogo ainda não foi inicializado");
+            return;
+        }
+        System.out.println("Informa a coluna em que o numero será inserido");
+        int col = runUntilGetValidNumber(0,8);
+        System.out.println("Informa a linha em que o numero será inserido");
+        int row = runUntilGetValidNumber(0,8);
+        System.out.printf("Informe o nuemro que vai entrar na posição [%s, %s]\n", col, row);
+        int value = runUntilGetValidNumber(1,9);
+        if(!board.changeValue(col, row,value)){
+            System.out.printf("A posição s% tem um valor fixo\n", col, row);
+        }
     }
 
-    private static void inputNumber() {
+    private static void removeNumber(){
         if (isNull(board)){
             System.out.println("O jogo ainda não foi inicializado");
             return;
