@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.toMap;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    final static static Scanner scanner = new Scanner(System.in);
+    final static Scanner scanner = new Scanner(System.in);
 
     private static Board board;
 
@@ -100,6 +100,9 @@ public class Main {
         int row = runUntilGetValidNumber(0,8);
         System.out.printf("Informe o nuemro que vai entrar na posição [%s, %s]\n", col, row);
         int value = runUntilGetValidNumber(1,9);
+        if(!board.clearValue(col, row)){
+            System.out.printf("A posição s% tem um valor fixo\n", col, row);
+        }
     }
 
     private static void starteGame(Map<String, String> positions) {
