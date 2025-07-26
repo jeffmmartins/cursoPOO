@@ -71,6 +71,21 @@ public class Main {
     }
 
     private static void showCurrentGame() {
+        if (isNull(board)){
+            System.out.println("O jogo ainda não foi inicializado");
+            return;
+        }
+
+        var args = new Object[01];
+        var argPos = 0;
+
+        for(int i = 0; i < BOARD_LIMIT; i++){
+            for (var col: board.getSpaces()){
+                args[argPos ++] = " " + ((isNull(col.get(i).getActual())) ? " " : col.get(i).getActual());
+            }
+        }
+        System.out.println("Seu jogo encontra-se da seguinte forma: ");
+        System.out.println();
     }
 
     private static void inputNumber() {
