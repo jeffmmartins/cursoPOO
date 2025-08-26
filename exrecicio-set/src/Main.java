@@ -27,7 +27,7 @@ public class Main {
 
             //começar ler o arquivo, lendo a primeira linha do arquivo
             String line = br.readLine();
-            //enquanot lne for diferente de nulo leio com sucesso a primeira linha.
+            //enquanto line for diferente de nul,leia com sucesso a primeira linha.
             while (line != null){
 
                 String[] fields = line.split("");
