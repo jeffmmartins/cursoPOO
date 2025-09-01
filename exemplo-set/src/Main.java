@@ -12,7 +12,7 @@ public class Main {
         set.add("Tablet");
 
         //set.remove("Tablet");
-        //remove todos que ttem pelo menos tamanho igual ou maior a 3 ( sinatxe do predicado.
+        //remove todos que ttem pelo menos tamanho igual ou maior a 3 ( sintaxe do predicado.
         //set.removeIf(x -> x.length() >= 3)
         System.out.println(set.contains("Notebook"));
         for(String p : set){
