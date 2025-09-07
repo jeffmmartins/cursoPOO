@@ -34,6 +34,7 @@ public class Main {
                 String username = fields[0];
                 Date moment = Date.from(Instant.parse(fields[1]));
                 //nçao permite adicionar objeto igual, já é regra do set.
+                //criando um novo obejto.
                 set.add(new LogEntry(username,moment));
 
 
