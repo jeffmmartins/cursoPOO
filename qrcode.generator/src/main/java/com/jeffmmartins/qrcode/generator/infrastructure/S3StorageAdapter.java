@@ -20,6 +20,7 @@ public class S3StorageAdapter implements StoragePort {
     //Anotação value recupera valores valores que estão no application.properties
     public S3StorageAdapter(@Value("${aws.region}") String region,
                             @Value("${aws.s3.buccket-name") String bucketName,
+                            S3Client s3Client
                             ) {
         this.bucketName = bucketName;
         this.region = region;
