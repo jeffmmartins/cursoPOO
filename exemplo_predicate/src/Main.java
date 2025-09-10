@@ -14,8 +14,10 @@ public class Main {
         list.add(new Product("Tablet", 350.00));
         list.add(new Product("HD Case", 80.00));
 
-        list.removeIf(p -> p.getPreco() >= 100);
+        list.removeIf( new ProductPredicate());
 
-        System.out.println(list);
+        for (Product p : list) {
+            System.out.println(p);
+        }
     }
 }
