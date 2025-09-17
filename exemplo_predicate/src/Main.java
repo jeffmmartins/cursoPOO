@@ -2,6 +2,7 @@ import entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -14,10 +15,20 @@ public class Main {
         list.add(new Product("Tablet", 350.00));
         list.add(new Product("HD Case", 80.00));
 
+        double min = 100.0;
+
+        // função anonima que recebe um produto p que resulta ...
+        //Exemplo de expressão declarada
+        //Predicate<Product> pred = p -> p.getPreco() >= min;
+        //list.removeIf(pred);
+
+        //expressão lambda inline
+        list.removeIf(p -> p.getPreco() >= min);
+
         //Method Reference
         //list.removeIf(Product::staticProductPredicate);
 
-        list.removeIf(Product::nonStaticProductPredicate);
+        //list.removeIf(Product::nonStaticProductPredicate);
 
         //list.removeIf( new ProductPredicate());
 
