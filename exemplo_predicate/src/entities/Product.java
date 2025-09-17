@@ -27,9 +27,14 @@ public class Product {
         this.preco = preco;
     }
 
-    
+
     public static boolean staticProductPredicate(Product p) {
         return p.getPreco() >= 100.00;
+    }
+
+    //Metodo não estatico sem passar argumentos.
+    public boolean nonStaticProductPredicate() {
+        return preco >= 100.00;
     }
 
 

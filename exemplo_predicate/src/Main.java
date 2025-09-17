@@ -15,7 +15,9 @@ public class Main {
         list.add(new Product("HD Case", 80.00));
 
         //Method Reference
-        list.removeIf(Product::staticProductPredicate);
+        //list.removeIf(Product::staticProductPredicate);
+
+        list.removeIf(Product::nonStaticProductPredicate);
 
         //list.removeIf( new ProductPredicate());
 
