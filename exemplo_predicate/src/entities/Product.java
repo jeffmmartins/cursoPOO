@@ -27,6 +27,12 @@ public class Product {
         this.preco = preco;
     }
 
+    
+    public static boolean staticProductPredicate(Product p) {
+        return p.getPreco() >= 100.00;
+    }
+
+
     @Override
     public String toString() {
         return "Product{" +
