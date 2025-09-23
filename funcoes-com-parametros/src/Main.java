@@ -1,4 +1,5 @@
 import entities.Product;
+import model.service.ProductService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,5 +15,12 @@ public class Main {
         list.add(new Product("Mouse", 50.00));
         list.add(new Product("Tablet", 350.00));
         list.add(new Product("HD Case", 80.00));
+
+        ProductService productService = new ProductService();
+
+        double resultado = productService.FilteredSum(list, p -> p.getName().charAt(0) == 'T');
+        System.out.println("Resultado da soma é:" + resultado);
+
+
     }
 }
