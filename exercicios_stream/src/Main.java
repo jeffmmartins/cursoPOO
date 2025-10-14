@@ -2,10 +2,8 @@ import entities.Product;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -29,6 +27,26 @@ public class Main {
                 //ler a proxima linha
                 line = br.readLine();
             }
+
+            // para encontrar o preço médio de todos os produtos.
+            double avg = list.stream()
+                    .map(p-> p.getPrice())
+                    .reduce(0.0, (x,y) -> x + y) / list.size();
+
+            System.out.println("Avarege price: " + String.format("%.2f", avg));
+
+            //Função que compara duas Strings
+            Comparator<String> comp = (s1, s2) -> s1.toUpperCase().compareTo(s2.toUpperCase());
+
+            List<String> names = list.stream()
+                    .filter(p -> p.getPrice() < avg)
+                    .map(p -> p.getName())
+                    //realizando a comparação de forma inversa.
+                    .sorted(comp.reversed())
+                    .collect(Collectors.toList());
+
+            names.forEach(System.out::println);
+
         } catch (Exception e){
             System.out.println("Error: " + e.getMessage());
         }
