@@ -1,4 +1,4 @@
-package repositories;
+package com.github.jeffmmartins.course.repositories;
 
 import com.github.jeffmmartins.course.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
